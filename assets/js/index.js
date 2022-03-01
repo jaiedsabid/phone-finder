@@ -52,7 +52,9 @@ const resetPhonesGrid = () => {
 
 /* On clock load more button */
 const onClickLoadMore = () => {
+    toggleLoadMoreSpinner();
     displayPhonesByCondition();
+    toggleLoadMoreSpinner();
 }
 
 const search = async () => {
