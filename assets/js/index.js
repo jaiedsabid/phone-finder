@@ -68,7 +68,17 @@ const search = async () => {
         
         if (!!phones.status) {
             phonesArray = await phones.data;
-            await displayPhonesByCondition();
+            
+            if (phonesArray.length === 0) {
+                // Render No items found message
+                phonesGrid.insertAdjacentHTML('beforeend', noItemFoundMessageGenerator());
+            } else {
+                // Render phones by condition
+                await displayPhonesByCondition();
+            }
+        } else {
+            // Render No items found message
+            phonesGrid.insertAdjacentHTML('beforeend', noItemFoundMessageGenerator());
         }
 
         toggleSearchSpinner();
@@ -77,6 +87,20 @@ const search = async () => {
     } catch (error) {
         console.error(error);
     }
+}
+
+const noItemFoundMessageGenerator = () => {
+    return (`
+        <div></div>
+        <div>
+            <h3 class="text-center text-2xl sm:text-3xl font-semibold text-slate-900 tracking-tight">
+                No Items found</h3>
+            <p class="mt-2 text-center text-sm sm:text-base text-slate-400 tracking-tight">Please search with
+                relevant
+                keyword</p>
+        </div>
+        <div></div>
+    `);
 }
 
 const phoneItemHTMLGenerator = (phone) => {
