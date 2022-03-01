@@ -13,6 +13,7 @@
     <!-- Tailwind Config -->
     <script>
         tailwind.config = {
+            content: ['*'],
             theme: {
                 extend: {
                     colors: {
@@ -36,24 +37,56 @@
     <!-- Main Section -->
     <main class="w-full p-6 overflow-x-hidden">
         <!-- Search Section -->
-        <section id="search-wrapper" class="container mx-auto">
+        <section id="search-wrapper" class="container mx-auto mb-[100px]">
             <div class="sm:w-2/4 mx-auto">
                 <label for="search" class="sr-only">Quick search</label>
                 <div class="mt-1 relative flex items-center">
                     <!-- Search Input -->
                     <input type="text" name="search" id="search"
-                        class="shadow hover:shadow-md focus:ring-blue-500 text-center focus:border-blue-500 block w-full pr-12 sm:text-sm border-gray-300 rounded-md transition-shadow duration-300 ease-in-out"
+                        class="shadow hover:shadow-md focus:ring-blue-500 text-center focus:border-blue-500 block w-full pr-12 sm:text-md border-gray-300 rounded-md transition-shadow duration-300 ease-in-out"
                         placeholder="Search...">
-                    <div class="absolute inset-y-0 right-1 flex py-1.5 pr-1.5">
+                    <div class="absolute inset-y-0 right-1 flex py-2 pr-1.5">
                         <!-- Search Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
                     </div>
                 </div>
             </div>
+        </section>
+        <!-- Results Section -->
+        <section id="phones-grid" class="container mx-auto my-10">
+            <div class="m-10 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+                <!-- Phone Item -->
+                <div
+                    class="group relative bg-gray-100 rounded-md shadow hover:shadow-md hover:-translate-y-1 transition duration-300 ease-in-out">
+                    <div
+                        class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none transition duration-300 ease-in-out">
+                        <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                            alt="Front of men&#039;s Basic Tee in black."
+                            class="w-full h-full object-center object-cover rounded-t-md lg:w-full lg:h-full">
+                    </div>
+                    <div class="h-20 flex justify-between px-6 pt-3 pb-4 group-hover:invisible">
+                        <div>
+                            <h3 class="text-md font-semibold text-gray-700">
+                                <div>
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Basic Tee
+                                </div>
+                            </h3>
+                            <p class="mt-1 text-md text-gray-500">Black</p>
+                        </div>
+                        <p class="text-md font-medium text-gray-900">$35</p>
+                    </div>
+                    <div
+                        class="absolute bottom-2 right-0 left-0 mt-4 h-16 flex justify-center p-2 invisible group-hover:visible">
+                        <button id="view-details" type="button"
+                            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200 ease-in-out">View
+                            Details</button>
+                    </div>
+                </div>
         </section>
     </main>
     <!-- Internal JS -->
