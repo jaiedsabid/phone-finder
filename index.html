@@ -38,9 +38,9 @@
     <main class="w-full p-6 overflow-x-hidden">
         <!-- Search Section -->
         <section id="search-wrapper" class="container mx-auto mb-[100px]">
-            <div class="sm:w-2/4 mx-auto">
+            <div class="sm:w-2/4 mx-auto flex items-center space-x-2">
                 <label for="search" class="sr-only">Quick search</label>
-                <div class="mt-1 relative flex items-center">
+                <div class="w-full relative flex items-center justify-center">
                     <!-- Search Input -->
                     <input type="text" name="search" id="search"
                         class="shadow hover:shadow-md focus:ring-blue-500 text-center focus:border-blue-500 block w-full pr-12 sm:text-md border-gray-300 rounded-md transition-shadow duration-300 ease-in-out"
@@ -54,6 +54,8 @@
                         </svg>
                     </div>
                 </div>
+                <button id="search-btn" type="button"
+                    class="inline-flex items-center px-5 py-2.5 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none transition duration-200 ease-in-out">Search</button>
             </div>
         </section>
         <!-- Results Section -->
@@ -83,7 +85,7 @@
                     <div
                         class="absolute bottom-2 right-0 left-0 mt-4 h-16 flex justify-center p-2 invisible group-hover:visible">
                         <button id="view-details" type="button"
-                            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200 ease-in-out">View
+                            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none transition duration-200 ease-in-out">View
                             Details</button>
                     </div>
                 </div>
