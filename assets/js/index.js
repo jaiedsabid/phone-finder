@@ -216,14 +216,14 @@ const renderFeatures = async (slug) => {
             sliderTitle.innerText = name;
             phoneImage.src = image;
             phoneBrand.innerText = brand;
-            phoneReleaseDate.innerText = releaseDate;
+            phoneReleaseDate.innerText = releaseDate || 'N/A';
 
             // Set main features
             const { storage, displaySize, chipSet, memory, sensors } = mainFeatures;
-            phoneStorage.innerText = storage;
-            phoneDisplaySize.innerText = displaySize;
-            phoneChipset.innerText = chipSet;
-            phoneMemory.innerText = memory;
+            phoneStorage.innerText = storage || 'N/A';
+            phoneDisplaySize.innerText = displaySize || 'N/A';
+            phoneChipset.innerText = chipSet || 'N/A';
+            phoneMemory.innerText = memory || 'N/A';
 
             // Set sensors
             phoneSensors.innerHTML = ''; // Reset first
