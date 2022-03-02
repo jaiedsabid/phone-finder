@@ -31,8 +31,16 @@ const toggleLoadMoreSpinner = () => {
     loadMoreBtnSpinner.classList.toggle('hidden');
 }
 
+/* Toggle load more button */
 const toggleLoadMoreBtn = () => {
     loadMoreBtn.classList.toggle('hidden');
+}
+
+/* Reset toggle button state */
+const resetPhoneAndLoadMoreState = () => {
+    phonesArray = [];
+    loadMoreBtnState = false;
+    loadMoreBtn.classList.add('hidden');
 }
 
 /* Reset search bar input value */
@@ -61,6 +69,7 @@ const search = async () => {
     try {
         toggleSearchSpinner();
         resetPhonesGrid();
+        resetPhoneAndLoadMoreState();
 
         const searchTerm = searchBarInput.value;
         const response = await fetch(searchAPI + searchTerm);
@@ -167,3 +176,19 @@ const renderPhones = (phones) => {
 /* Event-listeners */
 searchBarBtn.addEventListener('click', search);
 loadMoreBtn.addEventListener('click', onClickLoadMore);
+/* Fix initial height */
+window.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementsByTagName('header')[0];
+    const main = document.getElementsByTagName('main')[0];
+    const footer = document.getElementsByTagName('footer')[0];
+
+    const headerHeight = header.offsetHeight;
+    const mainHeight = main.offsetHeight;
+    const footerHeight = footer.offsetHeight;
+    const documentHeight = document.documentElement.clientHeight;
+
+    if (documentHeight > (headerHeight + mainHeight + footerHeight)) {
+        main.style.minHeight = `${documentHeight - (headerHeight + footerHeight)}px`;
+    }
+
+});
