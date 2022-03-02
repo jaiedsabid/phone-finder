@@ -176,6 +176,12 @@ const renderPhones = (phones) => {
 /* Event-listeners */
 searchBarBtn.addEventListener('click', search);
 loadMoreBtn.addEventListener('click', onClickLoadMore);
+searchBarInput.addEventListener('keypress', event => {
+    // On enter key press search
+    if (event.keyCode === 13) {
+        search();
+    }
+});
 /* Fix initial height */
 window.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementsByTagName('header')[0];
