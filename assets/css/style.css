@@ -1,0 +1,25 @@
+@keyframes slide-enter {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-leave {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.slide-enter {
+    animation: slide-enter 0.3s ease-in-out forwards;
+}
+
+.slide-leave {
+    animation: slide-leave 0.3s ease-in-out forwards;
+}

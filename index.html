@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Poppins:wght@400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,500&family=Poppins:wght@400;500;700&display=swap"
         rel="stylesheet">
     <!-- Internal CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -100,6 +100,104 @@
                     </svg>
                     Load More
                 </button>
+            </div>
+        </section>
+        <section id="phone-spec-wrapper">
+            <div id="slider" class="translate-x-full fixed inset-0 overflow-hidden" aria-labelledby="slide-over-title"
+                role="dialog" aria-modal="true">
+                <div class="absolute inset-0 overflow-hidden">
+
+                    <div class="absolute inset-0" aria-hidden="true"></div>
+
+                    <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10 sm:pl-16">
+
+                        <div class="pointer-events-auto w-screen max-w-2xl">
+                            <div class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
+                                <div class="px-4 pb-3 sm:px-6 border-b">
+                                    <div class="flex items-start justify-between">
+                                        <h2 class="text-lg font-bold text-gray-900" id="slider-title">Phone
+                                            Specifications</h2>
+                                        <div class="ml-3 flex h-7 items-center">
+                                            <button id="toggle-slider-btn" type="button"
+                                                class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                                <span class="sr-only">Close panel</span>
+                                                <!-- Heroicon name: outline/x -->
+                                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative mt-6 flex-1 px-4 sm:px-6">
+                                    <!-- Content -->
+                                    <div class="absolute inset-0 px-4 sm:px-6">
+                                        <div class="flex justify-center mb-12">
+                                            <img id="phone-image" src="" class="max-w-min max-h-min" alt="Phone Image">
+                                        </div>
+                                        <table>
+                                            <tr>
+                                                <td class="text-sm font-semibold inline-block w-28">Brand: </td>
+                                                <td id="phone-brand" class="text-sm font-medium inline-block"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-sm font-semibold inline-block w-28">Release Date: </td>
+                                                <td id="release-date" class="text-sm font-medium inline-block">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div class="space-y-2">
+                                            <h4 class="mt-5 text-md sm:text-base font-semibold text-gray-900">Main
+                                                Features
+                                            </h4>
+                                            <table>
+                                                <tr>
+                                                    <td class="text-sm font-semibold inline-block w-28">Storage: </td>
+                                                    <td id="storage" class="text-sm font-medium inline-block"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-sm font-semibold inline-block w-28">Display Size:
+                                                    </td>
+                                                    <td id="display-size" class="text-sm font-medium inline-block">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-sm font-semibold inline-block w-28">Chipset:
+                                                    </td>
+                                                    <td id="chipset" class="text-sm font-medium inline-block">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-sm font-semibold inline-block w-28">Memory:
+                                                    </td>
+                                                    <td id="memory" class="text-sm font-medium inline-block">
+                                                    </td>
+                                                </tr>
+                                                <tr class="flex">
+                                                    <td class="text-sm font-semibold inline-block w-28">Sensors:
+                                                    </td>
+                                                    <td class="text-sm font-medium inline-block">
+                                                        <ul id="sensors">
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="space-y-2 pb-4">
+                                            <h4 class="mt-5 text-md sm:text-base font-semibold text-gray-900">Others
+                                            </h4>
+                                            <table id="other-features">
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!-- End Content -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
