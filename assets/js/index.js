@@ -94,7 +94,7 @@ const noItemFoundMessageGenerator = () => {
         <div></div>
         <div>
             <h3 class="text-center text-2xl sm:text-3xl font-semibold text-slate-900 tracking-tight">
-                No Items found</h3>
+                No Result found</h3>
             <p class="mt-2 text-center text-sm sm:text-base text-slate-400 tracking-tight">Please search with
                 relevant
                 keyword</p>
