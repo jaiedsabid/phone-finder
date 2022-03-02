@@ -23,3 +23,7 @@
 .slide-leave {
     animation: slide-leave 0.3s ease-in-out forwards;
 }
+
+tr:not(:first-of-type) > td {
+    padding-top: 6px !important;
+}

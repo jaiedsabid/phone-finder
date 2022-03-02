@@ -151,7 +151,7 @@ const phoneItemHTMLGenerator = (phone) => {
         <div
             class="group relative bg-gray-50 rounded-md shadow-md hover:shadow-lg hover:-translate-y-1 transition duration-300 ease-in-out">
             <div
-                class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none transition duration-300 ease-in-out">
+                class="rounded-t-md w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none transition duration-300 ease-in-out">
                 <img src="${image}"
                     alt="${phone_name}"
                     class="w-full h-full object-center object-contain rounded-t-md lg:w-full lg:h-full">
@@ -251,7 +251,7 @@ const otherFeaturesHTMLGenerate = (key, value) => {
     otherFeatures.insertAdjacentHTML('beforeend', `
         <tr>
             <td class="text-sm font-semibold inline-block w-28">${key}: </td>
-            <td class="text-sm font-medium inline-block">${value}</td>
+            <td class="text-sm font-medium inline sm:inline-block">${value}</td>
         </tr>
     `);
 }
