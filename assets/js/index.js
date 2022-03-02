@@ -235,8 +235,12 @@ const renderFeatures = async (slug) => {
 
             // Set others
             otherFeatures.innerHTML = ''; // Reset first
-            for(const key in others) {
-                otherFeaturesHTMLGenerate(key, others[key]);
+            if ( Object.keys(others).length > 0 ) {
+                for(const key in others) {
+                    otherFeaturesHTMLGenerate(key, others[key]);
+                }
+            } else {
+                otherFeatures.innerHTML = '<span class="text-sm font-semibold">N/A</span>';
             }
 
             // Open Slider
