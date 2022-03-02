@@ -91,6 +91,7 @@ const onClickLoadMore = () => {
     toggleLoadMoreSpinner();
 }
 
+/* Search and generate result */
 const search = async () => {
     try {
         const searchTerm = searchBarInput.value;
@@ -130,6 +131,7 @@ const search = async () => {
     }
 }
 
+/* No result found message HTML generator */
 const noItemFoundMessageGenerator = () => {
     return (`
         <div></div>
@@ -144,6 +146,7 @@ const noItemFoundMessageGenerator = () => {
     `);
 }
 
+/* Phone card HTML Generator */
 const phoneItemHTMLGenerator = (phone) => {
     const {brand, phone_name, slug, image} = phone;
 
@@ -178,6 +181,7 @@ const phoneItemHTMLGenerator = (phone) => {
     `);
 }
 
+/* Render phones by conditions */
 const displayPhonesByCondition = () => {
     const loadMore = phonesArray.length > 20;
 
@@ -198,12 +202,14 @@ const displayPhonesByCondition = () => {
     }
 }
 
+/* Render phone card */
 const renderPhones = (phones) => {
     phones.forEach((phone) => {
         phonesGrid.insertAdjacentHTML('beforeend', phoneItemHTMLGenerator(phone));
     });
 }
 
+/* Render phone specifications */
 const renderFeatures = async (slug) => {
     try {
         const response = await fetch(detailsAPI + slug);
@@ -251,6 +257,7 @@ const renderFeatures = async (slug) => {
     }
 }
 
+/* Other features HTML generator */
 const otherFeaturesHTMLGenerate = (key, value) => {
     otherFeatures.insertAdjacentHTML('beforeend', `
         <tr>
