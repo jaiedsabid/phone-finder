@@ -241,7 +241,7 @@ const renderFeatures = async (slug) => {
 
             // Set others
             otherFeatures.innerHTML = ''; // Reset first
-            if ( Object.keys(others).length > 0 ) {
+            if ( !!others && Object.keys(others).length > 0 ) {
                 for(const key in others) {
                     otherFeaturesHTMLGenerate(key, others[key]);
                 }
