@@ -262,7 +262,7 @@ const otherFeaturesHTMLGenerate = (key, value) => {
     otherFeatures.insertAdjacentHTML('beforeend', `
         <tr>
             <td class="text-sm font-semibold inline-block w-28">${key}: </td>
-            <td class="text-sm font-medium inline sm:inline-block">${value}</td>
+            <td class="text-sm font-medium inline">${value}</td>
         </tr>
     `);
 }
