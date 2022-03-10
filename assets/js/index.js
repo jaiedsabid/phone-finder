@@ -273,7 +273,7 @@ searchBarBtn.addEventListener('click', search);
 loadMoreBtn.addEventListener('click', onClickLoadMore);
 searchBarInput.addEventListener('keypress', event => {
     // On enter key press search
-    if (event.keyCode === 13) {
+    if (event.key === 'Enter') {
         search();
     }
 });
